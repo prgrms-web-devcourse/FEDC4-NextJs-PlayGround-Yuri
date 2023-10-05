@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 export type Post = {
   id: string
@@ -9,11 +10,13 @@ export type Post = {
 export default function PostList({ posts }: { posts: Post[] }) {
   return (
     <ul>
-      {posts.map((post) => (
-        <li key={post.id}>
-          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-        </li>
-      ))}
+      <Suspense fallback={<p>Loading Feed...</p>}>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+          </li>
+        ))}  
+      </Suspense>
     </ul>
   )
 }
