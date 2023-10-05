@@ -3,7 +3,7 @@
 ![Alt text](email.gif)
 
 - nodemailer 라이브러리를 이용했습니다.
-- api routing을 이용해서 node.js에서 동작하는 nodemailer를 사용할 수 있었습니다.
+- api routing을 이용해 custom api를 만들어서 nodemailer의 성공 또는 실패에 따라 Response의 status code를 내려주었습니다. client component는 custom api를 호출하는 방식으로 구현했습니다.
 - fetch를 쓰다보니 네트워크 오류가 아니면 try catch에서 잡지 못하는 오류가 있었습니다. response.ok로 체크했습니다
 - 입력 성공에 따라 사용자에게 알림을 보여주는 로직을 추가하려고 합니다.
 - react hook form을 이용해서 form의 입력값을 관리했습니다. 아직 valdation은 추가하지 않았습니다.
