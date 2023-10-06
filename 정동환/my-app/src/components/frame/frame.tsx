@@ -5,7 +5,7 @@ export default function Frame({ photo }: { photo: Photo }) {
   return (
     <>
       <Image
-        alt=""
+        alt={photo.name}
         src={photo.imageSrc}
         height={600}
         width={600}
