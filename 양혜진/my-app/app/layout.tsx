@@ -1,10 +1,13 @@
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout(props: {
+  children: React.ReactNode
+  auth: React.ReactNode
+}) {
   return (
     <html lang="ko">
       <head>
         <title>kutta</title>
       </head>
-      <body>{children}</body>
+      <body>{props.children}</body>
     </html>
   )
 }
