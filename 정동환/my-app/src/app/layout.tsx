@@ -7,7 +7,7 @@ export const metadata = {
   metadataBase: new URL("https://nextgram.vercel.app"),
 };
 
-export default function Layout(props: {
+export default function RootLayout(props: {
   children: React.ReactNode;
   modal: React.ReactNode;
 }) {

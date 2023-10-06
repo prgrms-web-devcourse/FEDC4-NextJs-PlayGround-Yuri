@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Photo } from "../../photos";
+import { Photo } from "../../photo";
 
 export default function Frame({ photo }: { photo: Photo }) {
   return (
